@@ -1,25 +1,22 @@
+import getAuthor from './author';
 
-import { getAuthor } from "./author";
-
-var assert = require("chai").assert;
-
+const { assert } = require('chai');
 
 describe('Test author', () => {
-    var Autor= getAuthor()
-      
-    it('name is equual alexis ', () => {
-        assert.equal("alexis", Autor.name)
-    })
-    it('lastname is equual montana ', () => {
-        assert.equal("momtana", Autor.lastname)
-    })
+  const Autor = getAuthor();
 
-    it('name is of type string ', () => {
-        assert.typeOf(Autor.name, 'string')
-    })
+  it('name is equual alexis ', () => {
+    assert.equal('alexis', Autor.name);
+  });
+  it('lastname is equual montana ', () => {
+    assert.equal('momtana', Autor.lastname);
+  });
 
-    it('lastname is of type string ', () => {
-        assert.typeOf(Autor.name, 'string')
-    })
+  it('name is of type string ', () => {
+    assert.typeOf(Autor.name, 'string');
+  });
 
-})
+  it('lastname is of type string ', () => {
+    assert.typeOf(Autor.name, 'string');
+  });
+});

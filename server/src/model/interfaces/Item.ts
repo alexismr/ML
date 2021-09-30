@@ -1,13 +1,11 @@
-import { IPrice } from "./IPrice";
+import { IPrice } from './IPrice';
 
-export    interface Item    {
+export interface Item {
       id:string;
       title:string;
       price:IPrice;
       picture:string;
       condition:string;
+      // eslint-disable-next-line camelcase
       free_shipping:boolean;
 }
-
-
-   

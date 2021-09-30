@@ -1,7 +1,5 @@
-import { Interface } from "readline";
-
-export  interface IPrice   {
+export interface IPrice {
       currency:string
-      amount:Number
-      decimals:Number
+      amount:number
+      decimals:number
 }
