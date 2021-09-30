@@ -1,0 +1,128 @@
+
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "Documentacion Api",
+        "description": "Documentacion basica de consumo a servicio de mercado libre ",
+        "license": {
+            "name": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+        },
+        "contact": {
+            "name": "alexismr",
+            "url": "https://github.com/alexismr",
+            "email": "alexismontana.ramirez@gmail.com"
+          }
+    },
+    "servers": [
+        {
+            "url": "/api",
+            "description": "items"
+        }
+    ],
+    "tags": [
+        {
+            "name": "item",
+            "description": "API para obtener los valores mapeados"
+        }
+    ],
+    "consumes": [
+        "application/json"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "paths": {
+        "/items": {
+            "parameters": [
+                {
+                    "name": "q",
+                     "in": "query",
+                    "required": true,
+                    "description": "filtro de busqueda ",
+                    "type": "string"
+                }
+            ],
+            "get": {
+                "tags": [
+                    "item"
+                ],
+                "summary": "obtener todos los productos por parametro ()",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/item"
+                        }
+                    },
+                    "404": {
+                        "description": "falta parametro  (q)  /api/items?q=card"
+                    }
+                }
+            }
+    
+        },
+        "/items/{id}": {
+            "parameters": [
+                {
+                    "name": "id",
+                    "in": "path",
+                    "required": true,
+                    "description": "ID del producto ",
+                    "type": "string"
+                }
+            ],
+            "get": {
+                "tags": [
+                    "item"
+                ],
+                "summary": "Obtener item pot  ID",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/item"
+                        }
+                    },
+                    "404": {
+                        "description": "Failed. item not found."
+                    }
+                }
+            }
+  
+        }
+    },
+    "definitions": {
+        "items": {
+            "type": "object",
+            "properties": {
+                "ok": {
+                    "type": "boolean"
+                },
+                "mensaje": {
+                    "type": "string"
+                },
+                "body": {
+                    "type": "object"
+                }
+            }
+        },
+        "item": {
+            "type": "object",
+            "properties": {
+                "ok": {
+                    "type": "boolean"
+                },
+                "mensaje": {
+                    "type": "string"
+                },
+                "body": {
+                    "type": "object"
+                }
+            }
+        }
+    }
+}
+
+ 
