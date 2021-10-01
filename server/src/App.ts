@@ -1,5 +1,8 @@
 import express from 'express';
 import * as cors from 'cors';
+import swaggerUi from 'swagger-ui-express';
+import ItemsRouter from './rutes/items.router';
+import * as swaggerconfigDocument from '../config/swagger.json';
 
 class App {
   public app:express.Application
@@ -7,6 +10,12 @@ class App {
   constructor () {
     this.app = express();
     this.config();
+    this.loadRoutes();
+  }
+
+  private loadRoutes () {
+    this.app.use('/api-docs/swagger', swaggerUi.serve, swaggerUi.setup(swaggerconfigDocument));
+    this.app.use('/api/items', ItemsRouter);
   }
 
  optionscors: cors.CorsOptions = {
