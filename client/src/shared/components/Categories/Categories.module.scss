@@ -1,0 +1,39 @@
+
+@import '../../assets/styles/mixin';
+@import '../../assets/styles/color';
+@import '../../assets/styles/breakpoint';
+@import '../../assets/styles/sizevalues';
+
+
+$redsizemdvalue:  map-get($sizes, redsizemd);;
+.Categories {
+    margin: $redsizemdvalue   0px   $redsizemdvalue  0px ;
+
+}
+
+
+.categoriesul{
+    display: flex;
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+
+.categoriesArrayItem{
+    font-size: map-get($sizes, fontsize14md);
+    color:map-get($colors, gray-text);
+}
+
+.categoriesArrayItem:last-child {
+    font-weight: bold;
+}
+
+/*no aply first elemen*/
+
+.categoriesArrayItem +.categoriesArrayItem::before {
+    content: " > ";
+    display: inline-block;
+    padding-right: .5rem;
+    padding-left: .5rem;
+    color: #868e96;
+}

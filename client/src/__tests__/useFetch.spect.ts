@@ -1,5 +1,4 @@
 import { renderHook } from '@testing-library/react-hooks';
-import useAxios from 'axios-hooks'
 import useFetch from '../hooks/useFetch';
 test('validate initial state ', ()=>{
 
