@@ -1,8 +1,8 @@
 
-@import '../../assets/styles/mixin';
-@import '../../assets/styles/color';
-@import '../../assets/styles/breakpoint';
-@import '../../assets/styles/sizevalues';
+@import '../../../assets/styles/mixin';
+@import '../../../assets/styles/color';
+@import '../../../assets/styles/breakpoint';
+@import '../../../assets/styles/sizevalues';
 
 
 $redsizemdvalue:  map-get($sizes, redsizemd);;

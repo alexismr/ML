@@ -1,0 +1,30 @@
+
+@import '../../../assets/styles/color';
+@import '../../../assets/styles/mixin';
+@import '../../../assets/styles/breakpoint';
+
+.Header {
+    background-color: map-get($colors, yellow);
+    min-height: 35px;
+    &__container{
+      display: flex;
+      justify-content: center;
+      &__boxsearch{
+        width: calc(100% - 400px);
+      }
+    }
+    // config breakpoint
+    @include respond-to("xs"){
+      padding: .3rem 1rem;
+    }
+
+    @include respond-to("md"){
+      padding: .5rem 1rem;
+    }
+}
+
+.logo{
+ margin-right: 20px;
+}
+
+

@@ -1,0 +1,49 @@
+
+@import '../../assets/styles/mixin';
+@import '../../assets/styles/color';
+@import '../../assets/styles/breakpoint';
+@import '../../assets/styles/sizevalues';
+
+
+.SearchBox {
+    height: 100%;
+  
+    &__form{
+        display: flex;
+        position: relative;
+        height: 100%;
+
+        &__input , &__input :focus{
+            padding: 3px 50px 5px 10px;
+            border-radius: 2px;
+            background-color: #fff;
+            border: 0 rgba(0,0,0,.2);
+            width: 100%;
+            outline: 0;
+            min-width: 201px;
+            font-size: map-get($sizes, fontsize18md);
+        }
+        &__btn ,  &__btn:focus{
+            position: absolute;
+            border-radius: 0 2px 2px 0;
+            width: 46px;
+            border: 0 rgba(0,0,0,.2);
+            background-color:  map-get($colors, white);
+            right: 0px;
+            line-height: 1em;
+            box-sizing: border-box;
+            background:  map-get($colors, conten-gray);
+            height: 100%;
+            outline: 0;
+        }
+    
+       &__icon{
+        font-size: 16px;
+        line-height: 21px;
+        box-sizing: border-box;
+        cursor: pointer;
+       }
+    }
+
+ 
+}
