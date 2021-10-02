@@ -8,6 +8,13 @@
        $ npm install 
    ```
 
+   Configuracion proyecto  react
+    Run  -> http://localhost:9000/
+   ```sh
+       $ npm run start 
+   ```
+
+
    Configuraciones proyecto  nodejs -> http://localhost:5000/
      
    ```sh
