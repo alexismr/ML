@@ -13,11 +13,7 @@ import { Api } from '../../config/endpoint';
     const [error, setError] = useState(Error);
     const [isLoading, setIsLoading] = useState(false);
 
-
-
-
     useEffect(() => {
-        debugger
           if(config)
             {
                 setIsLoading(true);
