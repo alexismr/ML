@@ -1,29 +1,31 @@
 
 
 
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
+import Container from "../../components/Container/Container";
+import ProductDetail from "../../components/ProductDetail/ProductDetail";
+import SearchResults from "../../components/SearchResults/SearchResults";
 import NotFound from "../components/NotFound/NotFound";
 
 
 const Router: React.FC = () => (
-        <BrowserRouter >
-        <Switch>
+ <div data-testid="Router"> 
+      <Switch>
            <Route path='/'
                     exact
-                    component={NotFound} />
+                    component={Container} />
               <Route
                     path='/items' exact
-                    component={NotFound} />
+                    component={SearchResults} />
 
               <Route path="/items/:id"
                     exact 
-                    component={NotFound}/>
+                    component={ProductDetail}/>
 
              <Route path='*'  component={NotFound}/>
              <Route path='/items/*'  component={NotFound}/>
          </Switch>
-      </BrowserRouter>
-
+         </div>
 );
 
 export default Router;

@@ -1,0 +1,114 @@
+@import '../../assets/styles/mixin';
+@import '../../assets/styles/color';
+@import '../../assets/styles/breakpoint';
+@import '../../assets/styles/sizevalues';
+
+$greensizemdvalue:  map-get($sizes, greensizemd);;
+.ProductDetail {
+    display: grid;
+    background:  map-get($colors, white);
+
+ @include respond-to("xs"){
+        grid-template-columns: [x0] minmax(280px, 480px)[x1] minmax(100px,240px) [x2] 0.5fr [x3]; 
+        grid-template-rows:[y1] 0px [y2] auto[y3] 0.1fr[y4] ;
+
+        &__imgcontainer{
+            grid-column: x0/x1;
+            grid-row: y2/y3;
+            margin:  0px   $greensizemdvalue  0px  $greensizemdvalue;
+            max-height: 280px;
+            img{
+                height: 100%;
+                width: 100%;
+                overflow: hidden;
+            }
+        }
+    }
+
+   
+    @include respond-to("md"){
+        grid-template-columns: [x0] minmax(480px, 680px)[x1] minmax(100px,240px) [x2] 0.5fr [x3];
+        grid-template-rows:[y1] 0px [y2] auto[y3] 0.1fr[y4] ;
+    }
+   
+
+    &__imgcontainer{
+        grid-column: x0/x1;
+        grid-row: y2/y3;
+        margin:  0px   $greensizemdvalue  0px  $greensizemdvalue;
+        max-height: 680px;
+        img{
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+        }
+    }
+    &__information{
+        grid-column: x1/x2;
+        grid-row: y1/y3;
+        margin-top: $greensizemdvalue;
+        &__status{
+            font-size: map-get($sizes, fontsize14md);
+            color:map-get($colors,dark-text);
+        }
+        &__title{
+            font-size: map-get($sizes, fontsize24md);
+            margin-top: map-get($sizes ,redsizemd );
+            color:map-get($colors,dark);
+        }
+        &__price{
+            font-size: map-get($sizes, fontsize46md);
+            margin: $greensizemdvalue 0px $greensizemdvalue 0px;
+            color:map-get($colors,dark);
+
+        }
+      
+         &__btn{
+                width: 100%;
+                background-color:map-get($colors,blue);
+                color: map-get($colors, white);
+                border-color: map-get($colors,blue);
+                text-align: center;
+                vertical-align: middle;
+                user-select: none;
+                margin-right:$greensizemdvalue ;
+                border: 1px solid transparent;
+                padding: .375rem .75rem;
+                border-radius: .25rem;
+                transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+                font-size:  map-get($sizes, fontsize16md);;
+         }
+
+         &__btn:hover{
+            cursor: pointer;
+        }
+
+        &__btn:active{
+            background-color:map-get($colors,yellow);
+            color: #fff;
+            border-color: map-get($colors,blue);
+        }
+    }
+    &__description{
+        grid-column: x0/x1;
+        grid-row: y3/y4;
+        &__title{
+            font-size: map-get($sizes, fontsize28md);
+            padding:  0px  $greensizemdvalue 0px $greensizemdvalue ;
+            color:map-get($colors,dark);
+        }
+        &__text{
+
+            font-size: map-get($sizes, fontsize16md);
+            margin: 0px  0px $greensizemdvalue  $greensizemdvalue  ;
+            color:map-get($colors, gray-text);
+        }
+        
+    }
+
+}
+.Spinners{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }

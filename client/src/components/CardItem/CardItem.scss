@@ -1,0 +1,100 @@
+@import '../../assets/styles/mixin';
+@import '../../assets/styles/color';
+@import '../../assets/styles/breakpoint';
+@import '../../assets/styles/sizevalues';
+
+.CardItem {
+    display: grid;
+    background:  map-get($colors, white);
+    grid-template-columns: 1fr [x0] 2fr [x1] 3fr [x2];
+    grid-template-rows:[y0] 1fr[y1] 6fr[y2];
+    
+
+    &__image {
+        grid-row: y0 / y2 ;
+        cursor: pointer;
+        img {
+            width: 180px;
+            height: 180px;
+            border-radius: 4px;
+            overflow: hidden;
+
+        }
+        padding:map-get($sizes, redsizemd ); 
+    }
+
+    &__Description {
+        grid-column: x0/x1;
+        grid-row: y1;
+        &__price{
+            display: flex;
+            margin-bottom:  map-get($sizes, greensizemd);
+            align-items: center;
+            label {
+               font-size: map-get($sizes, fontsize24md);
+               margin-right: 10px;
+               color:map-get($colors,dark-text);
+
+            }
+            img{
+                max-height: 100%;
+            }
+        }
+
+        &__description{
+            font-size:map-get($sizes, fontsize18md ) ;
+            color:map-get($colors, dark-text); 
+            display: block;  
+        }
+
+        &__unique{
+            font-size:map-get($sizes, fontsize18md ) ;
+            color:map-get($colors, dark-text);   
+        }
+     }
+
+     &__addres {
+            grid-column: x1/x2;
+            grid-row: y1 ;
+            display: flex;
+            justify-content: center;
+        
+            
+            label{
+                font-size: map-get($sizes, fontsize12md);
+                color:map-get($colors, gray-text);
+                margin-top: 15px;
+            }
+     }
+
+
+
+    // @include respond-to("md"){
+    //     // grid-template-columns: 1fr [x0] 4fr [x1] 1fr [x2];
+    //     // grid-template-rows:  [y0] 1fr [y1] 1fr [y2];
+
+    //     &__image {
+    //         grid-row: y0 / y2 ;
+    //         img {
+    //             width: 180px;
+    //             height: 180px;
+    //             border-radius: 4px;
+    //             overflow: hidden;
+    //         }
+    //     }
+
+    //     &__Description {
+    //         grid-column: x0/x1;
+    //         grid-row: y0  ;
+    //      }
+
+    //      &__addres {
+    //             grid-column: x1/x2;
+    //             grid-row: y0  ;
+    //      }
+
+    // }
+
+
+
+}

@@ -1,15 +1,16 @@
 
 import { useRef, useState } from 'react';
-import useSendHistory from '../../hooks/useHistory';
 import './SearchBox.scss';
 
 import SearchImg from '../../assets/img/ic_Search.png';
+import { useHistory } from 'react-router-dom';
 
 const SearchBox: React.FC = () => {
  
  const [inputvalue, setInputvalue] = useState('')
- const value  = useSendHistory()[0];
  const inputEl  = useRef<HTMLInputElement>(null);
+
+   const history = useHistory();
    
   /**
   *  validar si  el usario agrego filtro
@@ -18,13 +19,12 @@ const SearchBox: React.FC = () => {
       event.preventDefault()
       if(inputEl.current?.value && validateisChangeInput()){
         setInputvalue(inputEl.current.value)
-        value.push(`/items?search=${inputEl.current?.value}`)
+        history.push(`/items?search=${inputEl.current?.value}`);
       }   
    }
 
    const validateisChangeInput = ():boolean =>(inputEl.current?.value != inputvalue)
  
-
   const onKeyDown =(e:any)=>{
     if (e.keyCode === 13) submitHandler(e);
   }

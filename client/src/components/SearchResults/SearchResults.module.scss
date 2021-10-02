@@ -1,0 +1,26 @@
+@import '../../assets/styles/mixin';
+@import '../../assets/styles/color';
+
+
+.SearchResults {
+  background:  map-get($colors, white);
+}
+
+.Spinners{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.line {
+  height: 1px;
+  bottom: 1px;
+  left: 1.25rem;
+  width: calc(100% - 5.5rem);
+  border: 1px solid #eee;
+}
+
+
+

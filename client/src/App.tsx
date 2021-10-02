@@ -3,10 +3,12 @@ import Router from './shared/Router/Router';
 import './App.scss';
 import Header from './shared/components/Header/Header';
 import Categories from './shared/components/Categories/Categories';
+import { BrowserRouter } from 'react-router-dom';
 
 function App() {
   return (
-    <div>
+ 
+       <BrowserRouter>
           <Header/>
         
           <div className="containerapp">
@@ -18,8 +20,9 @@ function App() {
                          <Router/>
                   </nav>
           </div>
+        </BrowserRouter >
 
-    </div>
+
 );
 }
 

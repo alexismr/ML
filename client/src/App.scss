@@ -1,42 +1,26 @@
+@import './assets/styles/mixin';
 
-@import './assets/styles/styles.scss';
+.containerapp{
+    display: grid;
+    margin-top: 0px;
+    min-height: 69vh;
+    margin-bottom: 32px;
 
-
-.App {
-  text-align: center;
+    @include respond-to("md"){
+       
+        grid-template-columns:2fr [x0] 10fr [x1] 2fr [x2];
+        grid-template-rows:  [y0] auto [y1] auto [y2];
+        &__nav{
+           
+            grid-column: x0;
+            grid-row: y1;
+        }
+        &__categories{
+            grid-column: x0;
+            grid-row: y0;
+        }
+    }
+    
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
