@@ -14,7 +14,7 @@ const Categories: React.FC = () =>{
   return (
     <div className={styles.Categories} data-testid="Categories">
       <ul className={styles.categoriesul}>
-        { data.map((item:string, k:any)=><li  className={styles.categoriesArrayItem} key={k} >{item}</li>
+        { data.map((item:string, k:number)=><li  className={styles.categoriesArrayItem} key={k} >{item}</li>
         )}
       </ul>
      

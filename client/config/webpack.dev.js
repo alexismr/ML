@@ -106,13 +106,13 @@ module.exports = {
           template: path.resolve(__dirname, "../public", "index.html"),
           favicon: './public/favicon.ico'
         }),
-        // new HotModuleReplacementPlugin(),
-        // new ForkTsCheckerWebpackPlugin({
-        //   async: false,
-        // }),
-        // new ESLintPlugin({
-        //   extensions: ["js", "jsx", "ts", "tsx"],
-        // }),
+        new HotModuleReplacementPlugin(),
+        new ForkTsCheckerWebpackPlugin({
+          async: false,
+        }),
+        new ESLintPlugin({
+          extensions: ["js", "jsx", "ts", "tsx"],
+        }),
 
         new CopyWebpackPlugin({
           patterns: [{ from: './src/assets/img/*.*', to: 'assets/img/[name][ext]'}]

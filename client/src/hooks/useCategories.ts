@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 
 import { useState, useEffect } from 'react';
 
@@ -20,7 +21,7 @@ const useCategories  = () => {
         return () => { //componentWillUnmount().
             listeners = listeners.filter(listener => listener !== newListener);
         };
-    }, [ ]);
+    }, [newListener]);
   return [state, setState];
 };
 
