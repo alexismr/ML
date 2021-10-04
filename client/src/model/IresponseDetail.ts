@@ -1,9 +1,7 @@
 import { Item } from "./IItem";
+import { Author } from "./IresponseGlobal";
 
 export   interface IresponseDetail {
-    author:{ 
-         name:string;
-         lastname:string; 
-        };
-    item:Item;
+    author:Author
+    item:Item
 }

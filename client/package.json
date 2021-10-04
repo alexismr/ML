@@ -24,7 +24,8 @@
     "build-production": "npm run webpack-production",
     "watch-webpack-dev": "webpack --env environment=dev --watch --color",
     "webpack-production": "webpack --env environment=prod",
-    "lint": "eslint src --ext tsx",
+    "lint": "eslint src --ext tsx ",
+    "lint-report":"eslint src --ext tsx  --format html -o ./eslint/report.html",
     "lint-and-fix": "eslint . --ext .tsx --fix"
   },
   "eslintConfig": {

@@ -11,8 +11,8 @@ describe('<CardItem />', () => {
       title:"xbox",
       price:{ 
         currency:"$",
-        amount:25000,
-        decimals:164
+        amount:"25000",
+        decimals:"164"
       },
       picture:"none",
       condition:"string",

@@ -10,6 +10,7 @@ import NoContent from '../../shared/components/NoContent/NoContent';
 import { Api } from '../../../config/endpoint';
 
 import Error from '../../shared/components/Error/Error';
+import { Item } from '../../model/IItem';
 const SearchResults: React.FC = (props: any) => {
   const setCategories = useCategories()[1];
   const [data, setData] = useState({ items: [] });
@@ -19,6 +20,7 @@ const SearchResults: React.FC = (props: any) => {
 
   useEffect(() => {
     if (response !== null) loadData(response)
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [response]);
 
 
@@ -35,7 +37,7 @@ const SearchResults: React.FC = (props: any) => {
         </div>
       )}
 
-      {data && data.items.map((item: any, k: any) => {
+      {data && data.items.map((item: Item, k: number) => {
         return (
           <article key={k}>
             <CardItem item={item} />

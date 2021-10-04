@@ -12,7 +12,6 @@ const { HotModuleReplacementPlugin }  =require( "webpack");
 
 
 
-const ROOT = path.resolve(__dirname, '..');
 console.log('@@@@@@@@@ USING PRODUCTION @@@@@@@@@@@@@@@');
 
 module.exports = {
@@ -36,15 +35,6 @@ module.exports = {
         mainFields: ['browser', 'main'],
        })],
         extensions: ['.ts', '.tsx', '.js']
-    },
-    devServer: {
-      historyApiFallback: true,
-      static: {
-        directory: path.join(ROOT,'/dist/'),
-      },
-      open: true,
-    //  hot: true,
-      port: 9001
     },
     
     module: {
