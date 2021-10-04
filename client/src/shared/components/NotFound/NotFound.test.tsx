@@ -30,12 +30,12 @@ describe('<NotFound />', () => {
     expect(notFound).toBeInTheDocument();
   });
 
-  test('it have  url from props', () => {
+  test('it has  url from props', () => {
     const title = screen.getByText(/rutaTest/i);
     expect(title).toBeInTheDocument();
   });
 
-  test('it have diferent path', () => {
+  test('it has diferent path', () => {
     const matchlocal: match<{ id: string }> = {
       isExact: false,
       path,

@@ -16,7 +16,7 @@ const useFetch = (config: IUseFetch) => {
            try {
             api({  method: method, url: url,data: data})
                 .then((res) => setResponse(res.data) )
-                .catch((err) => setError(err) )
+                .catch((err:Error) => setError(err.message) )
                 .finally(() => {
                     setIsLoading(false)});
             } 

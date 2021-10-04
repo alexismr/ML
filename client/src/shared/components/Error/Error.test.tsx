@@ -17,12 +17,12 @@ describe('<Error />', () => {
     expect(error).toBeInTheDocument();
   });
 
-  test('it have global mesagge', () => {
+  test('it has global mesagge', () => {
     const title = screen.getByText(/Error En Sistema/i);
     expect(title).toBeInTheDocument();
   });
 
-  test('it have  mesagge from props', () => {
+  test('it has  mesagge from props', () => {
     const title = screen.getByText(/unit test/i);
     expect(title).toBeInTheDocument();
   });

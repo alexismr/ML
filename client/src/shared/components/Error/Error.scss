@@ -1,0 +1,9 @@
+@import '../../../assets/styles/color';
+.Error {
+    display: grid;
+    justify-content: center;
+    h1{
+       text-align: center;
+       color: map-get($colors,orange );
+    }
+}

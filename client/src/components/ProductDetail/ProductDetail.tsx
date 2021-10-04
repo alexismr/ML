@@ -10,7 +10,7 @@ import { Api } from  '../../../config/endpoint';
 const ProductDetail: React.FC = () => {
   const { id } = useParams<RouteParams>();
   const [data, setData] = useState<IresponseDetail>();
-  const { response, isLoading, error } = useFetch({api:Api, method: "get", url: `/${id}` });
+  const { response, isLoading } = useFetch({api:Api, method: "get", url: `/${id}` });
 
   useEffect(() => {
     if (response !== null) loadData(response)

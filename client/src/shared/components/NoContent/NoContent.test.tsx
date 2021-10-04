@@ -13,7 +13,7 @@ describe('<NoContent />', () => {
     expect(noContent).toBeInTheDocument();
   });
 
-  test('it have text from props (filter:string)', () => {
+  test('it has text from props (filter:string)', () => {
     const filter = screen.getByText(/text to show/i);
     expect(filter).toBeInTheDocument();
   });

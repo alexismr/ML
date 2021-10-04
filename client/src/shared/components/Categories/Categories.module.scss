@@ -35,5 +35,5 @@ $redsizemdvalue:  map-get($sizes, redsizemd);;
     display: inline-block;
     padding-right: .5rem;
     padding-left: .5rem;
-    color: #868e96;
+    color: map-get($colors,gray-text );     
 }

@@ -1,9 +1,11 @@
+@import '../../../assets/styles/color';
+
 .NoContent {
 
     display: flex;
     justify-content: center;
     align-items: center;
-    background: white;
+    background:  map-get($colors, white);
     height: 300px;
 
 }

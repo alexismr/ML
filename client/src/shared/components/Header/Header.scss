@@ -6,19 +6,29 @@
 .Header {
     background-color: map-get($colors, yellow);
     min-height: 35px;
-    &__container{
-      display: flex;
-      justify-content: center;
-      &__boxsearch{
-        width: calc(100% - 400px);
-      }
-    }
+    min-width: 350px;
     // config breakpoint
     @include respond-to("xs"){
+      &__container{
+        display: flex;
+        justify-content: flex-start;
+        &__boxsearch{
+          width: 100%;
+          min-width: 300px;
+        }
+      }
+
       padding: .3rem 1rem;
     }
 
     @include respond-to("md"){
+      &__container{
+        display: flex;
+        justify-content: center;
+        &__boxsearch{
+          width: calc(100% - 400px);
+        }
+      }
       padding: .5rem 1rem;
     }
 }
