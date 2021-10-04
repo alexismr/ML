@@ -32,20 +32,6 @@
   ## Documentación API con  swagger
   - Abrir el navegador en la siguiente ruta  http://localhost:5000/api-docs/swagger/
  
- 
- 
-   ## Test y Metricas
- * Ejecutar pruebas   (npm run test)  
- * Configuración de ambientes con webpack  y typescript  
-      
-   <img src="https://github.com/alexismr/ML/blob/main/doc/img/test.gif" width="400" height="200" />
-   <img src="https://github.com/alexismr/ML/blob/main/doc/img/webpackconfig.gif" width="400" height="200" />
-   
-  * eslint reporte  
-  * Coverage test
-  
-     <img src="https://github.com/alexismr/ML/blob/main/doc/img/eslint.JPG" width="400" height="200" />
-     <img src="https://github.com/alexismr/ML/blob/main/doc/img/coverage.JPG" width="400" height="200" />
   
   ## Evidencia de la prueba: Frontend
   
