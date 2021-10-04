@@ -1,17 +1,19 @@
 import { renderHook } from '@testing-library/react-hooks';
+import { Api } from '../../config/endpoint';
 import useFetch from '../hooks/useFetch';
-test('validate initial state ', ()=>{
-
-    //  const  {response,error, isLoading}  = useFetch({ method:"get", url:"https://jsonplaceholder.typicode.com/posts"});
 
 
-    // // const  [{ data, loading, error }, refetch]   =useAxios({
-    // //     baseURL: 'https://reqres.in/api'
-    // //   });
+describe('<useCategories />', () => {
 
-
-    expect(true).toBe(true);
+    test('validate initial state ', ()=>{
+        const { result } = renderHook(() => useFetch({ api:Api,  method: "get", url:'falso' }))   
+        expect(result.current.error).toEqual("");
+        expect(result.current.isLoading).toEqual(true);
+        expect(result.current.response).toEqual(null);
+      
+      });
 
 });
+
 
 
