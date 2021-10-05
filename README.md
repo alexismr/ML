@@ -33,7 +33,7 @@
   - Abrir el navegador en la siguiente ruta  http://localhost:5000/api-docs/swagger/
  
   
-  ## Evidencia de la prueba: Frontend
+  ## DEMO
   
   * En base a los diseños dados, construir las siguientes tres vistas:
       * Caja de búsqueda
