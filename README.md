@@ -26,8 +26,8 @@
    ```
  * NOTA: se ejecutan primero (build) esto debido que la script (start) ejecuta nodemon y esta 
           escuchando un index.js
-   <img src="https://github.com/alexismr/ML/blob/main/doc/img/build1.gif" width="400" height="200" />
-   <img src="https://github.com/alexismr/ML/blob/main/doc/img/build2.gif" width="400" height="200" />
+   <img src="https://github.com/alexismr/ML/blob/main/doc/img/build1.gif" width="350" height="200" />
+   <img src="https://github.com/alexismr/ML/blob/main/doc/img/build2.gif" width="350" height="200" />
    
   ## Documentación API con  swagger
   - Abrir el navegador en la siguiente ruta  http://localhost:5000/api-docs/swagger/
@@ -50,5 +50,5 @@
     formulario navegar a la vista de Resultados de búsqueda, visualizando solo 4 productos. Luego,
     al hacer click sobre uno de ellos, debería navegar a la vista de Detalle de Producto.
     
-   <img src="https://github.com/alexismr/ML/blob/main/doc/img/evidence1.gif" width="400" height="200" /> 
-   <img src="https://github.com/alexismr/ML/blob/main/doc/img/evidence2.gif" width="400" height="200" />
+   <img src="https://github.com/alexismr/ML/blob/main/doc/img/evidence1.gif" width="350" height="200" /> 
+   <img src="https://github.com/alexismr/ML/blob/main/doc/img/evidence2.gif" width="350" height="200" />
